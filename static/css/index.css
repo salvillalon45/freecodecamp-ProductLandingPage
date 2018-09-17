@@ -1,0 +1,198 @@
+/* -----------------------------------------
+  Body
+*/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Questrial', sans-serif;
+}
+
+/* This will insert a space of height 75px before every id:
+   https://github.com/twbs/bootstrap/issues/1768 check the solution from @mnot
+*/
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
+/* -----------------------------------------
+  Navigation
+*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  background-color: black;
+  /* When elements overlap, z-order determines which one covers the other.
+     An element with a larger z-index generally covers an element with a lower one.
+  */
+  z-index: 9999;
+}
+
+nav .logo {
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul a:hover {
+  text-decoration: none;
+
+}
+
+nav ul a {
+  line-height: 80px;
+  padding: 12px 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* If [device width] is greater than or equal to ##px, then do {…}” */
+@media (max-width: 800px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 185px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    background-color: black;
+    /* When elements overlap, z-order determines which one covers the other.
+       An element with a larger z-index generally covers an element with a lower one.
+    */
+    z-index: 9999;
+  }
+}
+
+
+/* -----------------------------------------
+  Jumbotron
+*/
+section .container-fluid {
+  /* background-color: rgba(0,0,0,0.3); */
+}
+
+section.jumbotron {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/jumbotron_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* color: white; */
+}
+
+
+/* -----------------------------------------
+  servicios
+*/
+.container h2 {
+  margin-bottom: 50px;
+}
+
+.servicio-foto {
+  height: 250px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.clientes-foto {
+  height: 300px;
+  /* Use these to center pictures inside a container */
+  display: block;
+  margin: auto;
+}
+
+.clientes p {
+  margin-left: 119px;
+  margin-right: 119px;
+}
+
+
+/* -----------------------------------------
+  Video
+*/
+video {
+  display:block;
+  margin: auto;
+}
+
+
+/* -----------------------------------------
+  Haz Tu Cita and Submit Button
+*/
+#email {
+  width: 250px;
+}
+
+#submit {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: yellow;
+  border-radius: 10px;
+  border: 1px solid #00000000;
+}
+
+
+/* -----------------------------------------
+  Footer
+*/
+.footer {
+  color: white;
+  background-color: black;
+  margin-top: 100px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  font-size: 25px;
+}
+
+.footer img {
+  height: 70px;
+  margin-bottom: 13px;
+}
+
+/*
+  Position: relative
+  This is very similar to static positioning, except that once the
+  positioned element has taken its place in the normal layout flow,
+  you can then modify its final position, including making it overlap
+  other elements on the page.
+  We use top, bottom, left, right to modify it
+ */
+/* .services-container .column-1 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+} */
